@@ -5,9 +5,9 @@
     <ol>
       <li v-for="(item, index) in list" :key="index">
         <h6>{{ item.file.name }}</h6>
-        <div>Sha1: {{ item.sha1 }}</div>
-        <div>Sha256: {{ item.sha256 }}</div>
-        <div>Sha512: {{ item.sha512 }}</div>
+        <div>Sha1: {{ item.sha1 | empty }}</div>
+        <div>Sha256: {{ item.sha256 | empty }}</div>
+        <div>Sha512: {{ item.sha512 | empty }}</div>
       </li>
     </ol>
   </div>
@@ -55,6 +55,11 @@
         const hash = array.map(byte => byte.toString(16).padStart(2, 0)).join('')
 
         return hash
+      },
+    },
+    filters: {
+      empty (value) {
+        return value || '--'
       },
     },
     created () {
