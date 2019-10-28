@@ -9,6 +9,7 @@
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
   "dependencies": {
+    "byte-size": "^6.2.0",
     "crypto-hash": "^1.2.2",
     "file-reader-promise": "^1.0.1",
     "source-map-support": "^0.5.12",
