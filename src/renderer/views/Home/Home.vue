@@ -1,20 +1,27 @@
 <template>
   <div>
-    <h1>Home</h1>
+    <h1>File Hash</h1>
+    <div>
+      <FileHash />
+    </div>
+
   </div>
 </template>
 
 <script>
-// import { remote } from 'electron'
+  import FileHash from '@/views/Demos/FileHash'
 
-export default {
-  methods: {
+  export default {
+    components: {
+      FileHash,
+    },
+    methods: {
 
-  },
-  created () {
+    },
+    created () {
 
+    }
   }
-}
 </script>
 
 <style lang="scss">
