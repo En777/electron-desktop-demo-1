@@ -5,6 +5,12 @@
       <FileHash />
     </div>
 
+    <div class="otherDemo">
+      <h3>Other Demo</h3>
+      <div>
+
+      </div>
+    </div>
   </div>
 </template>
 
@@ -25,5 +31,7 @@
 </script>
 
 <style lang="scss">
-
+.otherDemo {
+  margin-top: 30vh;
+}
 </style>

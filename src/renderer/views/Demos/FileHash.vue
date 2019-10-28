@@ -51,6 +51,7 @@
           item.sha1 = await this.getHash('SHA-1', arrayBuffer)
           item.sha256 = await this.getHash('SHA-256', arrayBuffer)
           item.sha512 = await this.getHash('SHA-512', arrayBuffer)
+          console.log('item')
         })
       },
       async getHash (hashType, arrayBufer) {
@@ -75,10 +76,6 @@
         link.href = window.URL.createObjectURL(blob)
         document.body.append(link)
         link.click()
-
-        setTimeout(() => {
-          link.remove()
-        }, 10)
       },
     },
     filters: {
