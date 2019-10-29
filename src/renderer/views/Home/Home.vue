@@ -1,9 +1,6 @@
 <template>
-  <div>
-    <h1>File Hash</h1>
-    <div>
-      <FileHash />
-    </div>
+  <div class="Home">
+    <FileHash />
 
     <div class="otherDemo">
       <h3>Other Demo</h3>
@@ -32,6 +29,6 @@
 
 <style lang="scss">
 .otherDemo {
-  margin-top: 30vh;
+  margin-top: 15vh;
 }
 </style>
