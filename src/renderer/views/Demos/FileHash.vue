@@ -1,5 +1,7 @@
 <template>
-  <div class="FileHash">
+  <div class="FileHash" @drop="onDropFile" @dragover="onDragover">
+    <h1>File Hash</h1>
+
     <input type="file" multiple @change="onSelectFile">
 
     <ol>
@@ -42,7 +44,8 @@
             sha512: '',
           }
         })
-        this.list = list
+        // this.list = list
+        this.list.unshift.apply(this.list, list)
 
         list.forEach(async (item) => {
           const file = item.file
@@ -77,6 +80,16 @@
         document.body.append(link)
         link.click()
       },
+      onDragover (event) {
+        event.preventDefault()
+      },
+      onDropFile (event) {
+        event.preventDefault()
+        const files = event.dataTransfer.files
+        const event2 = { target: { files } }
+
+        this.onSelectFile(event2)
+      },
     },
     filters: {
       empty (value) {
@@ -91,6 +104,7 @@
 
 <style lang="scss">
 .FileHash {
+  min-height: 25vh;
   ol {
     font-size: 0.9em;
   }
