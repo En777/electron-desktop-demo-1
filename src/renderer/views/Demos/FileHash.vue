@@ -58,7 +58,7 @@
         })
       },
       async getHash (hashType, arrayBufer) {
-        // https://s0developer0mozilla0org.icopy.site/en-US/docs/Web/API/SubtleCrypto/digest
+        // https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest
         const digestArrayBuffer = await crypto.subtle.digest(hashType, arrayBufer)
         // convert buffer to byte array
         const array = Array.from(new Uint8Array(digestArrayBuffer))
